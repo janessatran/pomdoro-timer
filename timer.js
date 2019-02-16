@@ -1,13 +1,13 @@
 var intervalCount;
 var minutesDisplay = document.getElementById('minutes');
-console.log(minutesDisplay);
 var secondsDisplay = document.getElementById('seconds');
 var pomdoro_duration = 25*60;
+
 function startTimer(duration) {
-    console.log('timer activated!')
     var timer = duration, minutes, seconds;
     // update the timer display every second (1000)
     setInterval(function () {
+        // second param specifies numeral system
         minutes = parseInt(timer / 60, 10);
         seconds = parseInt(timer % 60, 10);
 
@@ -16,7 +16,6 @@ function startTimer(duration) {
         seconds = seconds < 10? "0" + seconds : seconds;
         minutesDisplay.textContent = minutes;
         secondsDisplay.textContent = seconds;
-        console.log(minutesDisplay.textContent);
 
         // decrease timer by one second
         if(timer-- < 0){
