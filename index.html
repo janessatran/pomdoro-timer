@@ -6,15 +6,33 @@
 <body> 
     <title>Pomdoro Timer</title>
     <h1>Pomdoro Timer</h1>
+    <div id='settings'>
+        <span>Set Work Minutes</span><br>
+        <button id='decrease-work-min'>-</button>
+        <span id='work-minutes'>25</span>
+        <button id='increase-work-min'>+</button>
+
+        <br>
+        <span>Set Break Minutes</span><br>
+        <button id='decrease-break-min'>-</button>
+        <span id='break-minutes'>5</span>
+        <button id='increase-break-min'>+</button>
+
+    </div>
+    <br><br><br>
     <div id='timer'> 
+        <span id='mode'>Work Session</span>
+        <br>
         <span id='minutes'>25</span>
         <span id='colon'>:</span>
         <span id='seconds'>00</span>
     </div>
-    <button class='button play'></button>
+    <br><br><br>
+
+    <button class='button play' id='play'></button>
     <br>
     <br>
-    <button class='button pause'></button>
+    <button class='button pause' id ='pause'></button>
 </body>
 <script type="text/javascript" src="timer.js?v1"></script>
 </html>
