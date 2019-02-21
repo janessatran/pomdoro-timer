@@ -20,6 +20,7 @@ function updateTimer(stop=false) {
             intervalCount ++;
             sound.play();
             sound.play();
+            sound.play();
             if (modeDisplay.textContent == 'Work Session') modeDisplay.textContent = 'Break Session'
             else modeDisplay.textContent = 'Work Session'
             minutesDisplay.textContent = '00';
