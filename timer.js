@@ -34,20 +34,22 @@ function play() {
         intervalCount = 0;
         startTimer();
     }
-    else
+    else {
         startTimer();
+    }
+    timerRunning = True;
 }
 
 function pause() {
     updateTimer(stop=true)
 }
 
-function stop() {
-
-}
-
 function reset() {
-    
+    console.log('resetting timer!')
+    minutes = 25;
+    seconds = 0;
+    setTime();
+    pause()
 }
 function setTime() {
     if (modeDisplay.textContent == 'Work Session') {
@@ -73,18 +75,19 @@ var minutes;
 var seconds = secondsDisplay.textContent;;
 var intervalId;
 var intervalCount = -1;
+var timerRunning = false;
 
-// add event listeners for play button
+// add event listeners for play button, 
 var playButton = document.getElementById('play');
 if (playButton.addEventListener) {
     playButton.addEventListener('click', function() {
-        play();
+        if(timerRunning == false) play();
     }, false);
 }
 //IE8 support 
 else { 
     playButton.attachEvent('onclick', function () {
-        play();
+        if(timerRunning == false) play();
     });
 }  
 
@@ -168,5 +171,18 @@ else {
     decreaseBreakMin.attachEvent('onclick', function () {
         if(breakMinutesSetting.textContent > 0)
             breakMinutesSetting.textContent--;
+    });
+}  
+// add event listeners for reset button
+var resetTimer = document.getElementById('reset')
+if (resetTimer.addEventListener) {
+    resetTimer.addEventListener('click', function() {
+        reset();
+    }, false);
+}
+//IE8 support 
+else { 
+    resetTimer.attachEvent('onclick', function () {
+        reset();
     });
 }  
