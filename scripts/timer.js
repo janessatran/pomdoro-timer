@@ -39,7 +39,7 @@ function play() {
         intervalCount = 0;
         startTimer();
     }
-    else
+    else {
         startTimer();
     timerRunning = true;
 }
@@ -52,7 +52,7 @@ function reset() {
     console.log('resetting timer!')
     minutes = 25;
     seconds = 0;
-    setTime();;
+    setTime();
     pause()
 }
 function setTime() {
@@ -82,7 +82,7 @@ var intervalCount = -1;
 var timerRunning = false;
 let sound = document.getElementById('bell-sound');
 
-// add event listeners for play button
+// add event listeners for play button, 
 var playButton = document.getElementById('play');
 if (playButton.addEventListener) {
     playButton.addEventListener('click', function() {
