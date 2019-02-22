@@ -1,5 +1,3 @@
-
-
 function startTimer() {
     intervalId = setInterval(updateTimer, 1000);
 }
@@ -41,6 +39,7 @@ function play() {
     }
     else {
         startTimer();
+    }
     timerRunning = true;
 }
 
@@ -55,6 +54,7 @@ function reset() {
     setTime();
     pause()
 }
+
 function setTime() {
     if (modeDisplay.textContent == 'Work Session') {
         minutes = workMinutesSetting.textContent;
@@ -66,7 +66,6 @@ function setTime() {
     }
     timer = duration, minutes, seconds;
 }
-
 
 var intervalCount;
 var workMinutesSetting = document.getElementById('work-minutes');
@@ -107,7 +106,7 @@ if (pauseButton.addEventListener) {
 else { 
     pauseButton.attachEvent('onclick', function () {
         pause();
-    });
+});
 }  
 
 // add event listeners for + work minutes
@@ -129,7 +128,7 @@ else {
 
 // add event listeners for - work minutes
 var decreaseWorkMin = document.getElementById('decrease-work-min')
-if (decreaseWorkMin.addEventListener) {
+    if (decreaseWorkMin.addEventListener) {
     decreaseWorkMin.addEventListener('click', function() {
         if(workMinutesSetting.textContent > 0) {
             workMinutesSetting.textContent--;
@@ -153,8 +152,7 @@ var increaseBreakMin = document.getElementById('increase-break-min')
 if (increaseBreakMin.addEventListener) {
     increaseBreakMin.addEventListener('click', function() {
         breakMinutesSetting.textContent++;
-
-    }, false);
+    }   , false);
 }
 //IE8 support 
 else { 
@@ -165,7 +163,7 @@ else {
 
 // add event listeners for - break minutes
 var decreaseBreakMin = document.getElementById('decrease-break-min')
-if (decreaseBreakMin.addEventListener) {
+    if (decreaseBreakMin.addEventListener) {
     decreaseBreakMin.addEventListener('click', function() {
         if(breakMinutesSetting.textContent > 0)
             breakMinutesSetting.textContent--;
@@ -180,9 +178,9 @@ else {
 }  
 // add event listeners for reset button
 var resetTimer = document.getElementById('reset')
-if (resetTimer.addEventListener) {
-    resetTimer.addEventListener('click', function() {
-        reset();
+    if (resetTimer.addEventListener) {
+        resetTimer.addEventListener('click', function() {
+            reset();
     }, false);
 }
 //IE8 support 
@@ -190,4 +188,4 @@ else {
     resetTimer.attachEvent('onclick', function () {
         reset();
     });
-}  
+}
