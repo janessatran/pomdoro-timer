@@ -17,9 +17,14 @@ function updateTimer(stop=false) {
     if (!stop ) {
         // decrease timer by one second
         if(timer-- < 0){
-            alert('Time for a break!');
             intervalCount ++;
-            modeDisplay.textContent = 'Break Session'
+            sound.play();
+            sound.play();
+            sound.play();
+            if (modeDisplay.textContent == 'Work Session') modeDisplay.textContent = 'Break Session'
+            else modeDisplay.textContent = 'Work Session'
+            minutesDisplay.textContent = '00';
+            secondsDisplay.textContent = '00';
             setTime();
         }
     }
@@ -36,8 +41,7 @@ function play() {
     }
     else {
         startTimer();
-    }
-    timerRunning = True;
+    timerRunning = true;
 }
 
 function pause() {
@@ -76,6 +80,7 @@ var seconds = secondsDisplay.textContent;;
 var intervalId;
 var intervalCount = -1;
 var timerRunning = false;
+let sound = document.getElementById('bell-sound');
 
 // add event listeners for play button, 
 var playButton = document.getElementById('play');

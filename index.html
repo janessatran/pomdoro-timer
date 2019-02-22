@@ -1,44 +1,42 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+        <title>Pomdoro Timer</title>
+        <link href="styles/style.css" type="text/css" rel="stylesheet" />
     </head>
 <body> 
-    <title>Pomdoro Timer</title>
-    <h1>Pomdoro Timer</h1>
-    <div id='settings'>
-        <span>Set Work Minutes</span><br>
-        <button id='decrease-work-min'>-</button>
-        <span id='work-minutes'>25</span>
-        <button id='increase-work-min'>+</button>
-
-        <br>
-        <span>Set Break Minutes</span><br>
-        <button id='decrease-break-min'>-</button>
-        <span id='break-minutes'>5</span>
-        <button id='increase-break-min'>+</button>
-
+    <div id='container'>
+        <h1 id='title'>Pomdoro Timer</h1>
+        <div id='settings'>
+            <div id='settings'>
+                    <h4>Work Minutes</h4>
+                    <button id='decrease-work-min'>-</button>
+                    <span id='work-minutes'>25</span>
+                    <button id='increase-work-min'>+</button>
+                </div>        
+        
+                <div id='settings'>
+                    <h4>Break Minutes</h4>
+                    <button id='decrease-break-min'>-</button>
+                    <span id='break-minutes'>5</span>
+                    <button id='increase-break-min'>+</button>
+                </div>
+        </div>
+        <br><br><br>
+        <div class='timer-display' id='timer'> 
+            <h3 id='mode'>Work Session</h3>
+            <span id='minutes'>25</span>
+            <span id='colon'>:</span>
+            <span id='seconds'>00</span>
+        </div>
+        <br><br><br>
+        <button class='button play' id='play'>play</button>
+        <button class='button pause' id ='pause'>pause</button>
+        <button class='button reset' id='reset'>reset</button>
     </div>
-    <br><br><br>
-    <div id='timer'> 
-        <span id='mode'>Work Session</span>
-        <br>
-        <span id='minutes'>25</span>
-        <span id='colon'>:</span>
-        <span id='seconds'>00</span>
-    </div>
-    <br><br><br>
-
-    <button class='fa fa-play' id='play'></button>
-    <br>
-    <br>
-    <button class='button pause' id ='pause'></button>
-    <br>
-    <br>
-    <button class='button reset' id='reset'></button>
 </body>
-<script type="text/javascript" src="timer.js?v1"></script>
+<audio src="audio/bell.mp3" id="bell-sound"></audio>
+
+<script type="text/javascript" src="scripts/timer.js?v1"></script>
 </html>
 
