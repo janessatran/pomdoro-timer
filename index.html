@@ -1,42 +1,39 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Pomdoro Timer</title>
-        <link href="styles/style.css" type="text/css" rel="stylesheet" />
-    </head>
-<body> 
-    <div id='container'>
-        <h1 id='title'>Pomdoro Timer</h1>
-        <div id='settings'>
+   <head>
+      <title>Pomdoro Timer</title>
+      <link href="styles/style.css" type="text/css" rel="stylesheet" />
+   </head>
+   <body>
+      <div id='container'>
+         <h1 id='title'>Pomdoro Timer</h1>
+         <div id='settings'>
             <div id='settings'>
-                    <h4>Work Minutes</h4>
-                    <button id='decrease-work-min'>-</button>
-                    <span id='work-minutes'>25</span>
-                    <button id='increase-work-min'>+</button>
-                </div>        
-        
-                <div id='settings'>
-                    <h4>Break Minutes</h4>
-                    <button id='decrease-break-min'>-</button>
-                    <span id='break-minutes'>5</span>
-                    <button id='increase-break-min'>+</button>
-                </div>
-        </div>
-        <br><br><br>
-        <div class='timer-display' id='timer'> 
+               <h3>Work Minutes</h3>
+               <button id='decrease-work-min'>-</button>
+               <span id='work-minutes'>25</span>
+               <button id='increase-work-min'>+</button>
+            </div>
+            <div id='settings'>
+               <h4>Break Minutes</h4>
+               <button id='decrease-break-min'>-</button>
+               <span id='break-minutes'>5</span>
+               <button id='increase-break-min'>+</button>
+            </div>
+         </div>
+         <br><br><br>
+         <div class='timer-display' id='timer'>
             <h3 id='mode'>Work Session</h3>
             <span id='minutes'>25</span>
             <span id='colon'>:</span>
             <span id='seconds'>00</span>
-        </div>
-        <br><br><br>
-        <button class='button play' id='play'>play</button>
-        <button class='button pause' id ='pause'>pause</button>
-        <button class='button reset' id='reset'>reset</button>
-    </div>
-</body>
-<audio src="audio/bell.mp3" id="bell-sound"></audio>
-
-<script type="text/javascript" src="scripts/timer.js?v1"></script>
+         </div>
+         <br><br><br>
+         <button class='button play' id='play'>play</button>
+         <button class='button pause' id ='pause'>pause</button>
+         <button class='button reset' id='reset'>reset</button>
+      </div>
+   </body>
+   <audio src="audio/bell.mp3" id="bell-sound"></audio>
+   <script type="text/javascript" src="scripts/timer.js?v1"></script>
 </html>
-
