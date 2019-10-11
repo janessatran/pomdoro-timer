@@ -4,6 +4,7 @@ html {
   letter-spacing: 1px;
 }
 body {
+  background-color: rgb(236, 191, 108);
   background-image: url("../../wave.png");
   background-repeat: no-repeat;
   background-size: contain;
