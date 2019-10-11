@@ -4,13 +4,19 @@ html {
   letter-spacing: 1px;
 }
 body {
-  background: orange;
+  background-image: url("../../wave.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  font-family: "Inconsolata", monospace;
 }
 h1 {
   font-size: 2rem;
+  padding: 10px;
 }
 h3 {
   font-size: 1.2rem;
+  color: red;
 }
 #container {
   text-align: center;
@@ -27,6 +33,7 @@ h3 {
 }
 .settings {
   display: inline-block;
+  padding: 10px;
 }
 .time {
   font-size: 2rem;
@@ -40,7 +47,7 @@ h3 {
   font-size: inherit;
   background: white;
   border: 3px solid black;
-  margin-right: 2.6rem;
+  margin-right: 1rem;
   box-shadow: 0 0 0 black;
   transition: all 0.2s;
 }
